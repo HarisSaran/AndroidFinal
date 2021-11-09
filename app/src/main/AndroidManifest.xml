@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Advertise">
         <activity
+            android:name=".InterstitialAddActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -21,8 +24,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5550814697393931~9363078107"/>
-
+            android:value="ca-app-pub-5550814697393931~9363078107" />
     </application>
 
 </manifest>
