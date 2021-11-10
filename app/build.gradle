@@ -36,7 +36,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    // For the Adds Lib
+    // For the Adds Lib Android Play Services
     implementation 'com.google.android.gms:play-services-ads:20.4.0'
 // For apps targeting Android 12, add WorkManager dependency.
     constraints {

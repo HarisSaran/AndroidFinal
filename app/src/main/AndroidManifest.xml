@@ -36,7 +36,7 @@
             </intent-filter>
         </activity>
 
-<!--        Add our application Meta-data-->
+<!--        Add our application Meta-data   Uses our ApID-->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5550814697393931~9363078107" />

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#80ff80"
+    android:background="#db8fe3"
     tools:context=".SettingsActivity"
     android:id="@+id/parentView">
 
@@ -13,7 +13,7 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#ff00ff"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
@@ -80,18 +80,18 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="159dp"
         android:layout_marginTop="398dp"
-        android:text="Dark Mode" />
+        android:text="Change Main Background" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/switch_change_images"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginTop="455dp"
-        android:text="Change Images" />
+<!--    <com.google.android.material.switchmaterial.SwitchMaterial-->
+<!--        android:id="@+id/switch_change_images"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginStart="153dp"-->
+<!--        android:layout_marginTop="455dp"-->
+<!--        android:text="Change Images" />-->
 
 
 </RelativeLayout>

@@ -7,14 +7,19 @@ import androidx.appcompat.widget.Toolbar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -66,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // BANNER Add
+
+        // Load the BANNER Add
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -129,9 +135,88 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Shared Preferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-
+        loadChanges();
     }
+
+        // Load The Changes
+        public void loadChanges(){
+            TextView intro = findViewById(R.id.tv_intro);
+            Button earnRewards = findViewById(R.id.btn_rewards);
+            Button interstitialAdd = findViewById(R.id.btn_interstitial);
+            RelativeLayout mainBackground = findViewById(R.id.main_layout);
+
+//            RelativeLayout mainBackground = findViewById(R.id.parentView);
+//            TextView world = findViewById(R.id.tv_world_news);
+//            TextView canada = findViewById(R.id.tv_can_news);
+//            ImageButton imgWorldButton = findViewById(R.id.ib_worldNews);
+//            ImageButton imgSportButton = findViewById(R.id.ib_sports);
+//            ImageButton imgCanadaButton = findViewById(R.id.ib_canNews);
+
+
+            String fontSize = sharedPreferences.getString(getString(R.string.text_size), "tst");
+            String fontColour = sharedPreferences.getString(getString(R.string.font_color), "tst");
+            String backGroundColor = sharedPreferences.getString(getString(R.string.dark_mode), "tst");
+            String changeImages = sharedPreferences.getString(getString(R.string.change_images), "tst");
+
+
+
+            if(fontSize.equals("big")){
+                intro.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+//                world.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+//                canada.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+            }
+            else{
+                intro.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
+//                world.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
+//                canada.setTextSize(TypedValue.COMPLEX_UNIT_SP,14);
+            }
+
+            if(fontColour.equals("yellow")){
+                intro.setTextColor(Color.parseColor("#0000FF"));
+//                world.setTextColor(Color.parseColor("#0000FF"));
+//                canada.setTextColor(Color.parseColor("#0000FF"));
+            }
+//        else if(fontColour.equals("pink")){
+            else{
+                intro.setTextColor(Color.parseColor("#000000"));
+//                world.setTextColor(Color.parseColor("#000000"));
+//                canada.setTextColor(Color.parseColor("#000000"));
+            }
+
+            if(backGroundColor.equals("dark")){
+//                mainBackground.setBackgroundColor(Color.parseColor("#72726e"));
+
+                mainBackground.setBackgroundResource(R.drawable.background_2);
+
+//                imgCanadaButton.setBackgroundColor(Color.parseColor("#72726e"));
+//                imgSportButton.setBackgroundColor(Color.parseColor("#72726e"));
+//                imgWorldButton.setBackgroundColor(Color.parseColor("#72726e"));
+
+            }
+            else{
+//                mainBackground.setBackgroundColor(Color.parseColor("#80ff80"));
+
+                mainBackground.setBackgroundResource(R.drawable.background_1);
+
+//                imgCanadaButton.setBackgroundColor(Color.parseColor("#80ff80"));
+//                imgSportButton.setBackgroundColor(Color.parseColor("#80ff80"));
+//                imgWorldButton.setBackgroundColor(Color.parseColor("#80ff80"));
+            }
+//            if(changeImages.equals("change")){
+//                imgCanadaButton.setImageResource(R.drawable.rocket);
+//                imgSportButton.setImageResource(R.drawable.rocket);
+//                imgWorldButton.setImageResource(R.drawable.rocket);
+//            }
+//        else{
+//            imgCanadaButton.setImageResource(R.drawable.can_news);
+//            imgSportButton.setImageResource(R.drawable.sports);
+//            imgWorldButton.setImageResource(R.drawable.world_news);
+//        }
+
+        }
+
 
     private void DisplayRewardedAds(){
         // directs us to the next activity and displays a reward video
@@ -193,6 +278,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.to_options){
             Toast.makeText(this, "Go to options menu", Toast.LENGTH_SHORT).show();
+//          Comment Out The two lines when uncommenting the line to display the add!!
+//            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+//            startActivityForResult(intent, REQUEST_CODE);
+//            Uncomment this line to display add!
             DisplayRewardedAdsSettings();
         }
         return super.onOptionsItemSelected(item);
