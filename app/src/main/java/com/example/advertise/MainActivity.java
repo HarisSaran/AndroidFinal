@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -54,10 +55,11 @@ public class MainActivity extends AppCompatActivity {
         btnInterstitial = findViewById(R.id.btn_interstitial);
         btnRewards = findViewById(R.id.btn_rewards);
 
-//        Toolbar myToolbar = findViewById(R.id.my_toolbar);
-//        setSupportActionBar(myToolbar);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
 
 
+        // Initialize our mobile adds so we can implement the type of banner we want to make..
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
@@ -126,6 +128,9 @@ public class MainActivity extends AppCompatActivity {
                 DisplayRewardedAds();
             }
         });
+
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+
     }
 
     private void DisplayRewardedAds(){
@@ -159,8 +164,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onCreateOptionsMenu(menu);
     }
-
-
 
 
     private void DisplayRewardedAdsSettings(){
