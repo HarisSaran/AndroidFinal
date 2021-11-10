@@ -2,13 +2,19 @@ package com.example.advertise;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -34,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
     private final String TAG = "MainActivity";
     private Button btnRewards;
 
+    SharedPreferences sharedPreferences;
+    public static final int REQUEST_CODE = 33;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnInterstitial = findViewById(R.id.btn_interstitial);
         btnRewards = findViewById(R.id.btn_rewards);
+
+//        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+//        setSupportActionBar(myToolbar);
+
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -134,6 +149,50 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Log.d(TAG, "The rewarded ad wasn't ready yet.");
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // inflate the options menu
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.activity_menu, menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+
+
+    private void DisplayRewardedAdsSettings(){
+        // directs us to the next activity and displays a reward video
+        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivityForResult(intent, REQUEST_CODE);
+
+        // display the add
+        if (mRewardedAd != null) {
+            Activity activityContext = MainActivity.this;
+            mRewardedAd.show(activityContext, new OnUserEarnedRewardListener() {
+                @Override
+                public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
+                    // Handle the reward.
+                    int rewardAmount = rewardItem.getAmount();
+                    String rewardType = rewardItem.getType();
+
+                    Log.d(TAG, "The user earned." + rewardAmount);
+                }
+            });
+        } else {
+            Log.d(TAG, "The rewarded ad wasn't ready yet.");
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.to_options){
+            Toast.makeText(this, "Go to options menu", Toast.LENGTH_SHORT).show();
+            DisplayRewardedAdsSettings();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 
