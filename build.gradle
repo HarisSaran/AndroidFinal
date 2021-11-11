@@ -1,6 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+//        jcenter()
         // Integrated google at project level
         google()
         mavenCentral()
@@ -12,6 +13,16 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+
+//allprojects {
+//    repositories {
+//        google()
+////        jcenter()
+//
+//        // Add this line into `repositories` in `buildscript`
+//        mavenCentral()
+//    }
+//}
 
 task clean(type: Delete) {
     delete rootProject.buildDir

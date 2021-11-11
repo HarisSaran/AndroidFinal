@@ -40,7 +40,7 @@ public class SettingsActivity extends AppCompatActivity {
         settings = (UserSettings) getApplication();
         initWidgets();
         loadSharedPreferences();
-        initSwitchListener();
+//        initSwitchListener();
 
         colorSwitchListener();
         sizeSwitchListener();
@@ -100,50 +100,50 @@ public class SettingsActivity extends AppCompatActivity {
         settings.setCustomTheme(theme);
     }
 
-    private void updateView()
-    {
-        final int black = ContextCompat.getColor(this, R.color.cardview_dark_background);
-        final int white = ContextCompat.getColor(this, R.color.white);
+//    private void updateView()
+//    {
+//        final int black = ContextCompat.getColor(this, R.color.cardview_dark_background);
+//        final int white = ContextCompat.getColor(this, R.color.white);
+//
+//        if(settings.getCustomTheme().equals(UserSettings.DARK_THEME))
+//        {
+//            titleTV.setTextColor(white);
+//            themeTV.setTextColor(white);
+//            themeTV.setText("Dark");
+//            parentView.setBackgroundColor(black);
+//            themeSwitch.setChecked(true);
+////            clrTextSwitch.setChecked(true);
+////            sizeTextSwitch.setChecked(true);
+//        }
+//        else
+//        {
+//            titleTV.setTextColor(black);
+//            themeTV.setTextColor(black);
+//            themeTV.setText("Light");
+//            parentView.setBackgroundColor(white);
+//            themeSwitch.setChecked(false);
+////            clrTextSwitch.setChecked(false);
+////            sizeTextSwitch.setChecked(false);
+//        }
+//
+//    }
 
-        if(settings.getCustomTheme().equals(UserSettings.DARK_THEME))
-        {
-            titleTV.setTextColor(white);
-            themeTV.setTextColor(white);
-            themeTV.setText("Dark");
-            parentView.setBackgroundColor(black);
-            themeSwitch.setChecked(true);
-//            clrTextSwitch.setChecked(true);
-//            sizeTextSwitch.setChecked(true);
-        }
-        else
-        {
-            titleTV.setTextColor(black);
-            themeTV.setTextColor(black);
-            themeTV.setText("Light");
-            parentView.setBackgroundColor(white);
-            themeSwitch.setChecked(false);
-//            clrTextSwitch.setChecked(false);
-//            sizeTextSwitch.setChecked(false);
-        }
-
-    }
-
-    private void initSwitchListener(){
-        themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
-                if(checked)
-                    settings.setCustomTheme(UserSettings.DARK_THEME);
-                else
-                    settings.setCustomTheme(UserSettings.LIGHT_THEME);
-
-                SharedPreferences.Editor editor = getSharedPreferences(UserSettings.PREFERENCES, MODE_PRIVATE).edit();
-                editor.putString(UserSettings.CUSTOM_THEME, settings.getCustomTheme());
-                editor.apply();
-                updateView();
-            }
-        });
-    }
+//    private void initSwitchListener(){
+//        themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+//                if(checked)
+//                    settings.setCustomTheme(UserSettings.DARK_THEME);
+//                else
+//                    settings.setCustomTheme(UserSettings.LIGHT_THEME);
+//
+//                SharedPreferences.Editor editor = getSharedPreferences(UserSettings.PREFERENCES, MODE_PRIVATE).edit();
+//                editor.putString(UserSettings.CUSTOM_THEME, settings.getCustomTheme());
+//                editor.apply();
+//                updateView();
+//            }
+//        });
+//    }
 
     public void colorSwitchListener(){
         clrTextSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

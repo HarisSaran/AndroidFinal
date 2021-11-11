@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.advertise"
-        minSdk 21
+        minSdk 23
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -36,8 +36,19 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
+    //For AWSMobileClient only:
+    implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.13.+'
+
+// Cognito UserPools for SignIn
+    implementation 'com.amazonaws:aws-android-sdk-auth-userpools:2.13.+'
+
+//For the drop-in UI also:
+    implementation 'com.amazonaws:aws-android-sdk-auth-ui:2.13.+'
+
     // For the Adds Lib Android Play Services
     implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    // amplify
+    implementation 'com.amplifyframework:core:1.4.0'
 // For apps targeting Android 12, add WorkManager dependency.
     constraints {
         implementation('androidx.work:work-runtime:2.7.0') {
