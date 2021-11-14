@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/drawable/buttonstyle.xml" value="0.14791666666666667" />
+        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_authentication.xml" value="0.13229166666666667" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_interstitial_add.xml" value="0.1390625" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_movies.xml" value="0.17135416666666667" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_settings.xml" value="0.13020833333333334" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/activity_menu.xml" value="0.13020833333333334" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/item_menu.xml" value="0.15" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/news_menu.xml" value="0.264" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/options_menu.xml" value="0.13020833333333334" />
+        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14791666666666667" />
       </map>
     </option>
   </component>

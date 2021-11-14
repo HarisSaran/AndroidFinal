@@ -23,7 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
     private SwitchMaterial clrTextSwitch, sizeTextSwitch, darkModeSwitch, themeSwitch; //, changeImagesSwitch;
     SharedPreferences sharedPreferences;
 
-    private UserSettings settings;
+//    private UserSettings settings;
     String text_color = "";
     String text_size = "";
     String dark_mode = "";
@@ -37,9 +37,9 @@ public class SettingsActivity extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        settings = (UserSettings) getApplication();
+//        settings = (UserSettings) getApplication();
         initWidgets();
-        loadSharedPreferences();
+//        loadSharedPreferences();
 //        initSwitchListener();
 
         colorSwitchListener();
@@ -84,9 +84,9 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     private void initWidgets(){
-        themeTV = findViewById(R.id.themeTV);
+//        themeTV = findViewById(R.id.themeTV);
         titleTV = findViewById(R.id.titleTV);
-        themeSwitch = findViewById(R.id.themeSwitch);
+//        themeSwitch = findViewById(R.id.themeSwitch);
         parentView = findViewById(R.id.parentView);
         clrTextSwitch = findViewById(R.id.switch_txcolor);
         sizeTextSwitch = findViewById(R.id.switch_txsize);
@@ -94,11 +94,11 @@ public class SettingsActivity extends AppCompatActivity {
 //        changeImagesSwitch = findViewById(R.id.switch_change_images);
     }
 
-    private void loadSharedPreferences(){
-        SharedPreferences sharedPreferences = getSharedPreferences(UserSettings.PREFERENCES, MODE_PRIVATE);
-        String theme = sharedPreferences.getString(UserSettings.CUSTOM_THEME, UserSettings.LIGHT_THEME);
-        settings.setCustomTheme(theme);
-    }
+//    private void loadSharedPreferences(){
+//        SharedPreferences sharedPreferences = getSharedPreferences(UserSettings.PREFERENCES, MODE_PRIVATE);
+//        String theme = sharedPreferences.getString(UserSettings.CUSTOM_THEME, UserSettings.LIGHT_THEME);
+//        settings.setCustomTheme(theme);
+//    }
 
 //    private void updateView()
 //    {

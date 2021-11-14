@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
     public static final int REQUEST_CODE = 33;
 
-
+    Button movies;
 
 
     @Override
@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
         btnInterstitial = findViewById(R.id.btn_interstitial);
         btnRewards = findViewById(R.id.btn_rewards);
+
+        movies = findViewById(R.id.btn_movies);
+        movies.setOnClickListener(movieClick);
 
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
@@ -139,6 +142,14 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
         loadChanges();
     }
+
+    private View.OnClickListener movieClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent i = new Intent(MainActivity.this, MoviesActivity.class);
+            startActivity(i);
+        }
+    };
 
         // Load The Changes
         public void loadChanges(){
