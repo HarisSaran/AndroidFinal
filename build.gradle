@@ -5,6 +5,9 @@ buildscript {
         // Integrated google at project level
         google()
         mavenCentral()
+
+        maven { url 'https://maven.google.com' }
+
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.2"
