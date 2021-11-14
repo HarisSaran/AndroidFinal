@@ -22,7 +22,10 @@ import java.util.List;
 import javax.net.ssl.HttpsURLConnection;
 
 public class MoviesActivity extends AppCompatActivity {
-    private static String JSON_URL = "https://run.mocky.io/v3/8205ce05-5ac2-4801-8afd-0f190f4f136c";
+    // Parse the most popular movies using the API for Popular movies
+    private static String JSON_URL ="https://api.themoviedb.org/3/movie/popular?api_key=c2238d0d01aa38ca10a288dee46ae575";
+
+//    private static String JSON_URL = "https://run.mocky.io/v3/8205ce05-5ac2-4801-8afd-0f190f4f136c";
     List<MovieModelClass> movieList;
     RecyclerView recyclerView;
 
@@ -84,7 +87,7 @@ public class MoviesActivity extends AppCompatActivity {
             // going throught the json (the array is called moviz)  inside of moviz are the json objects id, name, image
             try {
                 JSONObject jsonObject = new JSONObject(s);
-                JSONArray jsonArray = jsonObject.getJSONArray("moviz");
+                JSONArray jsonArray = jsonObject.getJSONArray("results");
 
                 // go through the array of objects with a for loop
                 for (int i = 0; i<jsonArray.length(); i++){
@@ -92,9 +95,9 @@ public class MoviesActivity extends AppCompatActivity {
 
                     MovieModelClass model = new MovieModelClass();
                     // Inside the movie model class lets put the objects we have created in the model class into the list we created
-                    model.setId(jsonObject1.getString("id"));
-                    model.setImg(jsonObject1.getString("image"));
-                    model.setName(jsonObject1.getString("name"));
+                    model.setId(jsonObject1.getString("vote_average"));
+                    model.setImg(jsonObject1.getString("poster_path"));
+                    model.setName(jsonObject1.getString("title"));
 
                     movieList.add(model);
                 }

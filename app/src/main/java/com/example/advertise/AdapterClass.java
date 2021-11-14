@@ -42,7 +42,12 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.MyViewHolder
         holder.name.setText(mData.get(position).getName());
 
         // Using glide to display the image since it is fast and efficient!!
-            Glide.with(mContext).load(mData.get(position).getImg()).into(holder.image);
+        // Need to get the link to the image now.. Found in the moviesdb documentation..
+        // https://image.tmdb.org/t/p/w500/xeItgLK9qcafxbd8kYgv7XnMEog.jpg
+        // the link where general images are stored is https://image.tmdb.org/t/p/w500  the API returnes the rest of the link
+        // we just add what the api returns and we get the image
+
+            Glide.with(mContext).load("https://image.tmdb.org/t/p/w500"+mData.get(position).getImg()).into(holder.image);
 
     }
 
