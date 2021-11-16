@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
             if(backGroundColor.equals("dark")){
 //                mainBackground.setBackgroundColor(Color.parseColor("#72726e"));
 
-                mainBackground.setBackgroundResource(R.drawable.background_2);
+                mainBackground.setBackgroundResource(R.drawable.joker1);
 
 //                imgCanadaButton.setBackgroundColor(Color.parseColor("#72726e"));
 //                imgSportButton.setBackgroundColor(Color.parseColor("#72726e"));
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity {
             else{
 //                mainBackground.setBackgroundColor(Color.parseColor("#80ff80"));
 
-                mainBackground.setBackgroundResource(R.drawable.background_1);
+                mainBackground.setBackgroundResource(R.drawable.jaws1);
 
 //                imgCanadaButton.setBackgroundColor(Color.parseColor("#80ff80"));
 //                imgSportButton.setBackgroundColor(Color.parseColor("#80ff80"));

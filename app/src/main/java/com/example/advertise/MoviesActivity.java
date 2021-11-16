@@ -95,6 +95,7 @@ public class MoviesActivity extends AppCompatActivity {
 
                     MovieModelClass model = new MovieModelClass();
                     // Inside the movie model class lets put the objects we have created in the model class into the list we created
+                    // For APIS we need to look at the name of what it returns and add it here..
                     model.setId(jsonObject1.getString("vote_average"));
                     model.setImg(jsonObject1.getString("poster_path"));
                     model.setName(jsonObject1.getString("title"));
