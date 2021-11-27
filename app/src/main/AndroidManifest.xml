@@ -26,6 +26,7 @@
         <activity
             android:name=".MoviesActivity"
             android:exported="true" />
+
         <activity
             android:name=".AuthenticationActivity"
             android:exported="true" >
@@ -35,6 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".SettingsActivity"
             android:exported="true"

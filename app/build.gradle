@@ -39,14 +39,20 @@ dependencies {
     // This is used for Glide to load images fast!
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 
+        // Add Dependencies, Mobile SDK, Userpools SDK, Auth ui SDK
+    // ---------------------------------------------------------------------
     //For AWSMobileClient only:
     implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.13.+'
 
-// Cognito UserPools for SignIn
+    // Cognito UserPools for SignIn
     implementation 'com.amazonaws:aws-android-sdk-auth-userpools:2.13.+'
 
-//For the drop-in UI also:
+    //For the drop-in UI also:
     implementation 'com.amazonaws:aws-android-sdk-auth-ui:2.13.+'
+
+    // *** change minSdk to 23
+    // ---------------------------------------------------------------------
+
 
     // For the Adds Lib Android Play Services
     implementation 'com.google.android.gms:play-services-ads:20.4.0'
