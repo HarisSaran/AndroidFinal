@@ -4,15 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/drawable/buttonstyle.xml" value="0.14791666666666667" />
+        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_add_movie.xml" value="0.1828125" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_authentication.xml" value="0.13229166666666667" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_interstitial_add.xml" value="0.2" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_modify_movie.xml" value="0.264" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_movies.xml" value="0.17135416666666667" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_settings.xml" value="0.13020833333333334" />
-        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/fragment_emp_list.xml" value="0.1828125" />
+        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/activity_view_record.xml" value="0.1828125" />
+        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/fragment_emp_list.xml" value="0.264" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/layout/movie_item.xml" value="0.18072916666666666" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/activity_menu.xml" value="0.13020833333333334" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/item_menu.xml" value="0.15" />
+        <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/main.xml" value="0.17604166666666668" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/menu.xml" value="0.1828125" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/news_menu.xml" value="0.264" />
         <entry key="..\:/Haris_RRC/RRC-Term5/Mobile Application Development/FinalAdv/app/src/main/res/menu/options_menu.xml" value="0.13020833333333334" />

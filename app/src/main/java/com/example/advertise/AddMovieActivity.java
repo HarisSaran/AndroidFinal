@@ -45,10 +45,11 @@ public class AddMovieActivity extends Activity implements View.OnClickListener {
                 final String desc = descEditText.getText().toString();
 
                 dbManager.insert(name, desc);
-                Intent main = new Intent(AddMovieActivity.this,InterstitialAddActivity.class)
+                Intent main = new Intent(AddMovieActivity.this, InterstitialAddActivity.class)
                         .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
                 startActivity(main);
+                break;
         }
     }
 }
