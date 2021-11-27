@@ -2,6 +2,7 @@ package com.example.advertise;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -35,6 +36,12 @@ public class InterstitialAddActivity extends AppCompatActivity {
         dbManager = new DBManager(this);
         dbManager.open();
         Cursor cursor = dbManager.fetch();
+
+
+        Toolbar myToolbar = findViewById(R.id.fragment_toolbar);
+        setSupportActionBar(myToolbar);
+
+
 
         listView = findViewById(R.id.list_view);
         listView.setEmptyView(findViewById(R.id.empty));
