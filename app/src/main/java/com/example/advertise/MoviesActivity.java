@@ -1,11 +1,15 @@
 package com.example.advertise;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,7 +32,7 @@ public class MoviesActivity extends AppCompatActivity {
 //    private static String JSON_URL = "https://run.mocky.io/v3/8205ce05-5ac2-4801-8afd-0f190f4f136c";
     List<MovieModelClass> movieList;
     RecyclerView recyclerView;
-
+    ImageView header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,9 @@ public class MoviesActivity extends AppCompatActivity {
 
         movieList = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerView);
+        header = findViewById(R.id.header_image);
+        //Displaying Image
+        Glide.with(this).load(R.drawable.header).into(header);
 
         // Creating the Async Task
         GetData getData = new GetData();
@@ -113,7 +120,7 @@ public class MoviesActivity extends AppCompatActivity {
 
     private void PutDataIntoRecyclerView(List<MovieModelClass> movieList){
         AdapterClass adapterClass = new AdapterClass(this,movieList);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
         recyclerView.setAdapter(adapterClass);
     }
