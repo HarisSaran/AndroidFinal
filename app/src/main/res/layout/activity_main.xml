@@ -20,13 +20,15 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
 <!--    Impliment the AdView  Make sure to change the UnitId to your apps UnitID  ca-app-pub-5550814697393931/2875251875-->
+<!--    Second one ca-app-pub-5550814697393931/2178529130-->
+<!--    Defaults google code ca-app-pub-3940256099942544/6300978111-->
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        app:adSize="LARGE_BANNER"
+        app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3940256099942544/6300978111"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
