@@ -37,10 +37,12 @@ public class InterstitialAddActivity extends AppCompatActivity {
         dbManager.open();
         Cursor cursor = dbManager.fetch();
 
+        //---------------------------------------------------------
 
         Toolbar myToolbar = findViewById(R.id.fragment_toolbar);
         setSupportActionBar(myToolbar);
 
+        //---------------------------------------------------------
 
 
         listView = findViewById(R.id.list_view);
@@ -99,7 +101,7 @@ public class InterstitialAddActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
