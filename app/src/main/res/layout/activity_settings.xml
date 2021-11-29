@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#db8fe3"
+    android:background="@color/black"
     tools:context=".SettingsActivity"
     android:id="@+id/parentView">
 
@@ -13,7 +13,7 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#ff00ff"
+        android:background="#4d4d4d"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
@@ -23,7 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="true"
-        android:textColor="@color/black"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/architects_daughter"
+
         android:textSize="30sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -60,7 +64,11 @@
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="291dp"
-        android:text="Color" />
+        android:text="Color"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/architects_daughter" />
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/switch_txsize"
@@ -69,20 +77,29 @@
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="347dp"
-        android:text="Size" />
+        android:text="Size"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/architects_daughter"/>
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/switch_dark_mode"
-        android:layout_width="wrap_content"
+        android:layout_width="227dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="398dp"
-        android:text="Change Main Background" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="417dp"
 
-<!--    <com.google.android.material.switchmaterial.SwitchMaterial-->
+        android:layout_marginEnd="93dp"
+        android:fontFamily="@font/architects_daughter"
+        android:text="Change Main Background"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#ffffff" />
+
+    <!--    <com.google.android.material.switchmaterial.SwitchMaterial-->
 <!--        android:id="@+id/switch_change_images"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
