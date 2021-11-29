@@ -58,7 +58,8 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.MyViewHolder
 
                 Intent i = new Intent(mContext,MoveDetailsActivity.class);
                 i.putExtra("results","https://image.tmdb.org/t/p/w500"+mData.get(position).getImg());
-                i.putExtra("results2", "The Rating for "+ mData.get(position).name+" is "+ mData.get(position).id );
+                i.putExtra("results2", "The Rating for "+ mData.get(position).name+" is "+ mData.get(position).id +"/10.  The " +
+                        "movie is directed by Haris Saran" );
 
                 mContext.startActivity(i);
 
