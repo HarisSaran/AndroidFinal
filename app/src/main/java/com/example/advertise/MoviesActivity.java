@@ -43,7 +43,7 @@ public class MoviesActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         header = findViewById(R.id.header_image);
         //Displaying Image
-        Glide.with(this).load(R.drawable.header).into(header);
+        Glide.with(this).load(R.drawable.thegodfather).into(header);
 
         // Creating the Async Task
         GetData getData = new GetData();
