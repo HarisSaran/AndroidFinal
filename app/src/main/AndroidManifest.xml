@@ -24,6 +24,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".MoveDetailsActivity"
+            android:exported="true" />
+        <activity
             android:name=".ModifyMovieActivity"
             android:exported="true" />
         <activity
@@ -54,6 +57,9 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5550814697393931~9363078107" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

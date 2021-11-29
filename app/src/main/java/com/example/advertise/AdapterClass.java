@@ -1,6 +1,7 @@
 package com.example.advertise;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +50,21 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.MyViewHolder
 
             Glide.with(mContext).load("https://image.tmdb.org/t/p/w500"+mData.get(position).getImg()).into(holder.image);
 
+
+            // We can set the on click here
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(mContext,MoveDetailsActivity.class);
+                i.putExtra("results","https://image.tmdb.org/t/p/w500"+mData.get(position).getImg());
+                i.putExtra("results2", "The Rating for "+ mData.get(position).name+" is "+ mData.get(position).id );
+
+                mContext.startActivity(i);
+
+            }
+        });
+
     }
 
     @Override
@@ -64,6 +80,8 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.MyViewHolder
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
+
             id = itemView.findViewById(R.id.id_txt);
             name = itemView.findViewById(R.id.name_txt);
             image = itemView.findViewById(R.id.imageView);
