@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.bumptech.glide.Glide;
+
 public class AddMovieActivity extends Activity implements View.OnClickListener {
     // this activity allows the user to add data into the database
 
@@ -34,7 +36,32 @@ public class AddMovieActivity extends Activity implements View.OnClickListener {
         dbManager.open();
         addTodoBtn.setOnClickListener(this);
 
+        getIncomingIntent();
+
     }
+
+//    get intent and put data into field
+    private void getIncomingIntent(){
+        Bundle bundle = getIntent().getExtras();
+
+        if(bundle!=null)
+        {
+            String pass_value = bundle.getString("results3");
+            subjectEditText.setText(pass_value);
+
+//            String desc_value = bundle.getString("result2");
+//            descEditText.setText(desc_value);
+
+//            String imageValue = bundle.getString("results");
+//            info.setText(pass_value);
+//
+//            Glide.with(this)
+//                    .load(imageValue)
+//                    .into(image);
+        }
+    }
+
+
 
     @Override
     public void onClick(View view) {

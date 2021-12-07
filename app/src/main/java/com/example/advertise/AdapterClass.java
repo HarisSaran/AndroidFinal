@@ -55,11 +55,11 @@ public class AdapterClass extends RecyclerView.Adapter<AdapterClass.MyViewHolder
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent i = new Intent(mContext,MoveDetailsActivity.class);
+//                Intent i = new Intent(mContext,MoveDetailsActivity.class);
+                Intent i = new Intent(mContext,AddMovieActivity.class);
                 i.putExtra("results","https://image.tmdb.org/t/p/w500"+mData.get(position).getImg());
-                i.putExtra("results2", "The Rating for "+ mData.get(position).name+" is "+ mData.get(position).id +"/10.  The " +
-                        "movie is directed by Haris Saran" );
+                i.putExtra("results2", "The Rating for "+ mData.get(position).name+" is "+ mData.get(position).id +"/10.  My Review:" );
+                i.putExtra("results3", mData.get(position).name);
 
                 mContext.startActivity(i);
 
