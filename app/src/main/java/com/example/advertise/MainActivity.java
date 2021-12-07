@@ -134,7 +134,10 @@ public class MainActivity extends AppCompatActivity {
         btnRewards.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DisplayRewardedAds();
+                Intent i = new Intent(MainActivity.this, InterstitialAddActivity.class);
+                startActivity(i);
+
+//                DisplayRewardedAds();
             }
         });
 
@@ -231,8 +234,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void DisplayRewardedAds(){
         // directs us to the next activity and displays a reward video
-        Intent i = new Intent(this, InterstitialAddActivity.class);
-        startActivity(i);
+//        Intent i = new Intent(this, InterstitialAddActivity.class);
+//        startActivity(i);
 
         // display the add
         if (mRewardedAd != null) {
@@ -264,8 +267,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void DisplayRewardedAdsSettings(){
         // directs us to the next activity and displays a reward video
-        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-        startActivityForResult(intent, REQUEST_CODE);
+//        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+//        startActivityForResult(intent, REQUEST_CODE);
 
         // display the add
         if (mRewardedAd != null) {
@@ -290,10 +293,10 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.to_options){
             Toast.makeText(this, "Go to options menu", Toast.LENGTH_SHORT).show();
 //          Comment Out The two lines when uncommenting the line to display the add!!
-//            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-//            startActivityForResult(intent, REQUEST_CODE);
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivityForResult(intent, REQUEST_CODE);
 //            Uncomment this line to display add!
-            DisplayRewardedAdsSettings();
+//            DisplayRewardedAdsSettings();
         }
         return super.onOptionsItemSelected(item);
     }
