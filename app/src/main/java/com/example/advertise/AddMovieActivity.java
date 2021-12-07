@@ -49,6 +49,9 @@ public class AddMovieActivity extends Activity implements View.OnClickListener {
             String pass_value = bundle.getString("results3");
             subjectEditText.setText(pass_value);
 
+            String desc_EditText = bundle.getString("results2");
+            descEditText.setText(desc_EditText);
+
 //            String desc_value = bundle.getString("result2");
 //            descEditText.setText(desc_value);
 
