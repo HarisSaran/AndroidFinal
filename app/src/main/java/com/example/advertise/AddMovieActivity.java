@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
@@ -20,6 +21,8 @@ public class AddMovieActivity extends Activity implements View.OnClickListener {
     private EditText descEditText;
     private DBManager dbManager;
 
+    ImageView image;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +34,8 @@ public class AddMovieActivity extends Activity implements View.OnClickListener {
         subjectEditText = findViewById(R.id.subject_edittext);
         descEditText = findViewById(R.id.description_edittext);
         addTodoBtn = findViewById(R.id.add_record);
+
+        image = findViewById(R.id.img_note);
 
         dbManager = new DBManager(this);
         dbManager.open();
@@ -52,15 +57,15 @@ public class AddMovieActivity extends Activity implements View.OnClickListener {
             String desc_EditText = bundle.getString("results2");
             descEditText.setText(desc_EditText);
 
-//            String desc_value = bundle.getString("result2");
-//            descEditText.setText(desc_value);
 
-//            String imageValue = bundle.getString("results");
-//            info.setText(pass_value);
-//
-//            Glide.with(this)
-//                    .load(imageValue)
-//                    .into(image);
+            String imageValue = bundle.getString("results");
+//            descEditText.setText(pass_value);
+
+            Glide.with(this)
+                    .load(imageValue)
+                    .into(image);
+
+
         }
     }
 
