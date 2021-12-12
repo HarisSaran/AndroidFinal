@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             if(fontSize.equals("big")){
-                intro.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+                intro.setTextSize(TypedValue.COMPLEX_UNIT_SP,35);
 //                world.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
 //                canada.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
             }
@@ -188,13 +188,13 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if(fontColour.equals("yellow")){
-                intro.setTextColor(Color.parseColor("#0000FF"));
+                intro.setTextColor(Color.parseColor("#fd5353"));
 //                world.setTextColor(Color.parseColor("#0000FF"));
 //                canada.setTextColor(Color.parseColor("#0000FF"));
             }
 //        else if(fontColour.equals("pink")){
             else{
-                intro.setTextColor(Color.parseColor("#000000"));
+                intro.setTextColor(Color.parseColor("#feff73"));
 //                world.setTextColor(Color.parseColor("#000000"));
 //                canada.setTextColor(Color.parseColor("#000000"));
             }

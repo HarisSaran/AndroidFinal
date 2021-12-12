@@ -2,7 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.advertise.InterstitialAddActivity">
+    tools:context="com.example.advertise.InterstitialAddActivity"
+    android:background="@color/black">
 
     <item
         android:id="@+id/add_record"
